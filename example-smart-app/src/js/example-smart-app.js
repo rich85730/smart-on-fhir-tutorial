@@ -12,6 +12,12 @@
         var patient = smart.patient;
         var pt = patient.read();
         //GetMedications(smart);
+        
+        var statinRxs = smart.patient.api.search({type: 'MedicationOrder'});
+  	  
+  	  statinRxs.done(function(prescriptions){
+  		  alert(prescriptions);
+  		});
         var obv = smart.patient.api.fetchAll({
                       type: 'Observation',
                       query: {
