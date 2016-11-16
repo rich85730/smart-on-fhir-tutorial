@@ -14,7 +14,7 @@
         //GetMedications(smart);
         
         var statinRxs = smart.patient.api.search({type: 'MedicationOrder'});
-  	  
+  	  alert(statinRxs);
   	  statinRxs.done(function(prescriptions){
   		  alert(prescriptions);
   		});
